@@ -439,3 +439,11 @@ function checkEnter(event) {
         $("#sbox").submit();
     }
 }
+
+function fixSelectedProjects() {
+    var notSelected = $("#project option:not(:selected)");
+    if (notSelected.length == 0) {
+        $("select").val(["*"]);
+    }
+    $("#sbox").submit();
+}

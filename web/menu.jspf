@@ -186,7 +186,7 @@ org.opensolaris.opengrok.web.Util"
     }
     %>
 
-    <p><input tabindex="9" class="submit" type="submit" value="Search"/> 
+    <p><input tabindex="9" class="submit" onclick="javascript: fixSelectedProjects();" type="submit" value="Search"/> 
     <input tabindex="10" class="submit" onclick="javascript: clearSearchFrom();" 
 	   type="button" value=" Clear "/> 
     <button class="help" tabindex="11" onclick="window.open('help.jsp');">Help

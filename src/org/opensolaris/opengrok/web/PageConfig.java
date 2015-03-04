@@ -790,17 +790,18 @@ public final class PageConfig {
                 set.add(s);
             }
         }
+        if(vals.size() == 1 && vals.get(0).equals(ALL_PROJECTS_WILDCARD)) {
+            //use all existing projects 
+            for (Project p : projects) {
+                set.add(p.getDescription());
+            }
+        }
+
         if (set.isEmpty()) {
             List<String> cookies = getCookieVals(cookieName);
             for (String s : cookies) {
                 if (Project.getByDescription(s) != null) {
                     set.add(s);
-                }
-                if (s.equals(ALL_PROJECTS_WILDCARD)) {
-                    //use all existing projects 
-                    for (Project p : projects) {
-                        set.add(p.getDescription());
-                    }
                 }
             }
         }
