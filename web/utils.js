@@ -441,8 +441,9 @@ function checkEnter(event) {
 }
 
 function fixSelectedProjects() {
+    $("#project option#all").attr("selected", "");
     var notSelected = $("#project option:not(:selected)");
-    if (notSelected.length == 0) {
+    if (notSelected.length == 1) {
         $("select").val(["*"]);
     }
     $("#sbox").submit();

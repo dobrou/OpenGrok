@@ -181,6 +181,7 @@ org.opensolaris.opengrok.web.Util"
             %>><%= e.getValue() %></option><%
         }
         %>
+        <option hidden value="*" id="all">[All projects]</option>
     </select>
 </div><%
     }
